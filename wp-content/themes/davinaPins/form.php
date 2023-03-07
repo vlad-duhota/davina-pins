@@ -19,7 +19,7 @@
                         $glow = $_POST["glow"] ?? null;
                         $picture = $_POST["picture"] ?? null;
                         
-                        $myemail = 'wordpress@leads.davinapins.com';
+                        $myemail = 'vladarduino@gmail.com';
                         $subject = "New client from Davina Pins";
                         $msg = "Form Data:\n" 
                         ."First Name: $name\n" 
