@@ -22,3 +22,16 @@ function base_scripts_styles() {
     // wp_enqueue_script('google', 'https://maps.googleapis.com/maps/api/js?key='.get_field('google_api_key', 'option').'&libraries=places&language=en', [], '', $in_footer );
 }
 add_action( 'wp_enqueue_scripts', 'base_scripts_styles' );
+
+// Carbon Fields
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+	require_once( 'includes/carbon-fields/vendor/autoload.php' );
+	\Carbon_Fields\Carbon_Fields::boot();
+}
+
+add_action('carbon_fields_register_fields', 'register_carbon_fields');
+function register_carbon_fields () {
+    require_once('includes/carbon-fields-options/theme-options.php');
+    require_once('includes/carbon-fields-options/post-meta.php');
+}

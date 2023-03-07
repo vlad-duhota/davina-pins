@@ -14,7 +14,8 @@
         <header class="header">
             <div class="container">
                 <a href="#" class="header__logo">
-                    <img src="<?php echo get_template_directory_uri()?>/img/logo.svg">
+                    <?php $logo = carbon_get_theme_option('logo')?>
+                    <?php echo wp_get_attachment_image($logo, 'full')?>
                 </a>
                 <nav class="header__menu">
                     <ul class="header__menu-list">
