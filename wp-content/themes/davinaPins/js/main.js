@@ -55,8 +55,6 @@ $(document).ready(function () {
             type: "POST",
             url: "wp-content/themes/davinaPins/form.php",
             data: formData,
-            dataType: "json",
-            encode: true,
         }).done(function (data) {
             console.log(data);
         });
